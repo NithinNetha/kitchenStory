@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../services/cart.service';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -7,8 +8,9 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  searchKey:string
   public productList:any
-  constructor(private proApi:ProductService) { }
+  constructor(private proApi:ProductService,private cartService:CartService) { }
 
   ngOnInit(): void {
     this.proApi.getProducts().subscribe(res=>{
@@ -17,6 +19,18 @@ export class ProductComponent implements OnInit {
         Object.assign(a,{quantity:1,total:a.price});
       });
     })
+  }
+  addToCart(product:any){
+    this.cartService.addToCart(product);
+  }
+  Search(){
+    if(this.searchKey==""){
+      this.ngOnInit();
+    }else{
+      this.productList=this.productList.filter(res=>{
+        return res.title.toLocaleLowerCase().match(this.searchKey.toLocaleLowerCase())
+      })
+    }
   }
 
 }

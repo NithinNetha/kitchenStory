@@ -1,9 +1,24 @@
 {
-    "products":[
-        {"id":1,"title":"Chicke & Leek Pie","category":"pie","price":8.20,"image":"./assets/images/chickenPie.jpg"},
-        {"id":2,"title":"Lamb & Mint Pie","category":"pie","price":8.20,"image":"./assets/images/lambPie.jpg"}
+    "products": [
+        {
+            "id": 1,
+            "title": "Chicken & Leek Pie",
+            "category": "pie",
+            "price": 8.20,
+            "image": "./assets/images/chickenPie.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Lamb & Mint Pie",
+            "category": "pie",
+            "price": 8.20,
+            "image": "./assets/images/lambPie.jpg"
+        }
     ],
-    "Admin":[
-        {"username":"admin","password":"password"}
+    "Admin": [
+        {
+            "username": "admin",
+            "password": "password"
+        }
     ]
 }
