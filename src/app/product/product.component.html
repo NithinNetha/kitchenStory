@@ -1,1 +1,63 @@
-<p>product works!</p>
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="container d-flex">
+            <!-- <div class="item">
+                <a>
+                    <img src="./assets/images/allProd-cat.jpg" alt="">
+                    <h6>All products</h6>
+                </a>
+            </div>
+            <div class="item">
+                <a>
+                    <img src="./assets/images/pie-cat.jpg" alt="">
+                    <h6>Pies</h6>
+                </a>
+            </div>
+            <div class="item">
+                <a>
+                    <img src="./assets/images/tart-cat.jpg" alt="">
+                    <h6>Tarts</h6>
+                </a>
+            </div>
+            <div class="item">
+                <a>
+                    <img
+                        src="./assets/images/meal-cat.jpg"
+                        alt="">
+                    <h6>Meals</h6>
+                </a>
+            </div> -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="navSec">
+                    <a class="navbar-brand">All Products</a>
+                </div>
+                <div class="navSec">
+                    <a class="navbar-brand">Pie</a>
+                </div>
+                <div class="navSec">
+                    <a class="navbar-brand">Tart</a>
+                </div>
+                <div class="navSec">
+                    <a class="navbar-brand">Meals</a>
+                </div>
+            </nav>
+            <div class="form-group">
+                <input type="text" class="form-control" name="searchKey" placeholder="Search Product">
+            </div>
+            <span class='fas fa-search search-icon'></span>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch">{{item.title}}
+                </h5>
+                <p><strong>Price: </strong>${{item.price}}</p>
+                <button class="btn btn-primary">Add to Cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
