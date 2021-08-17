@@ -20,5 +20,13 @@
             "username": "admin",
             "password": "password"
         }
+    ],
+    "Customer":[
+        {
+            "email":"cust@gmail.com",
+            "name":"Customer",
+            "contact":"9786542546",
+            "Address":"4-12-17,Acer Road,Lenovo-522155"
+        }
     ]
 }
