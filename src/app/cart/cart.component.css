@@ -44,3 +44,7 @@ h4,h6{
     padding: 12px 72px;
     border-radius: 3px !important;
 }
+.ship{
+    color:red;
+    font-size: xx-small;
+}

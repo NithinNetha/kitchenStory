@@ -27,11 +27,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="4"></td>
+                            <td colspan="3"></td>
                             <td><button (click)="emptyCart()" class="btn btn-danger">Empty Cart</button></td>
                             <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
                             <td><button routerLink="/getCustomer" class="btn btn-success">CheckOut</button></td>
-                            <td><strong>Grand Total : ${{grandTotal}}</strong></td>
+                            <td><strong>Grand Total : ${{grandTotal}}</strong><br><span class="ship">Shipping charges will be applied</span></td>
                         </tr>
                     </tbody>
                 </table>

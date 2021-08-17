@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-checkout',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
+  grandTotal:any;
 
-  constructor() { }
-
+  constructor(private cartService:CartService) {  }
   ngOnInit(): void {
+    this.grandTotal=this.cartService.getTotalPrice();
+    this.grandTotal+=9;
   }
 
 }

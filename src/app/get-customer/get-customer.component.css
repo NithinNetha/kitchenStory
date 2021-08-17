@@ -5,3 +5,7 @@
     border-radius: 8px;
     padding:10px;
 }
+.error{
+    color:red;
+    font-size: x-small;
+}

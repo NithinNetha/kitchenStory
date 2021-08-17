@@ -1,7 +1,7 @@
 import { CustomerService } from './../services/customer.service';
 import { CustomerModel } from './customer-model';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormGroup, } from '@angular/forms';
+import { FormBuilder,FormControl,FormGroup, Validators, } from '@angular/forms';
 
 @Component({
   selector: 'app-get-customer',
@@ -10,15 +10,23 @@ import { FormBuilder,FormGroup, } from '@angular/forms';
 })
 export class GetCustomerComponent implements OnInit {
   formValue!:FormGroup;
+  name:FormControl;
+  email:FormControl;
+  contact:FormControl;
+  address:FormControl;
   customerObj:CustomerModel=new CustomerModel();
   constructor(private formbuilder:FormBuilder,private customerService:CustomerService) { }
 
   ngOnInit(): void {
+    this.name=new FormControl('',Validators.required)
+    this.email=new FormControl('',[Validators.required,Validators.email])
+    this.contact=new FormControl('',[Validators.required,Validators.minLength(8)])
+    this.address=new FormControl('',Validators.required)
     this.formValue=this.formbuilder.group({
-      name:[''],
-      email:[''],
-      contact:[''],
-      address:['']
+      name:this.name,
+      email:this.email,
+      contact:this.contact,
+      address:this.address
     })
   }
   saveCustomer(){

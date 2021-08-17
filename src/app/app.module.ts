@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { GetCustomerComponent } from './get-customer/get-customer.component';
+import { PrintOrderComponent } from './print-order/print-order.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GetCustomerComponent } from './get-customer/get-customer.component';
     ProductComponent,
     CartComponent,
     CheckoutComponent,
-    GetCustomerComponent
+    GetCustomerComponent,
+    PrintOrderComponent
   ],
   imports: [
     BrowserModule,
