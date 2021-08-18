@@ -1,0 +1,13 @@
+.logo{
+    height: 80px;
+    width: 60px;
+    cursor: pointer;
+}
+.header-title{
+    position: relative;
+    top: 10px;
+    left:25px;
+    font-family: 'WindSong', cursive;
+    font-size: 64px;
+    color: black;
+}

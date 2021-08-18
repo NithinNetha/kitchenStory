@@ -30,5 +30,7 @@ export class PrintOrderComponent implements OnInit {
     this.grandtotal=this.total+9;
     this.cartService.removeAllCart();
   }
-
+  printOrder(){
+    window.print();
+  }
 }
