@@ -10,6 +10,5 @@ export class CustomerService {
   
   saveCustomer(data:any){
     this.customerDetails=data;
-    console.log(this.customerDetails);
   }
 }

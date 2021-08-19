@@ -11,7 +11,7 @@
 }
 .card{
     padding: 20px;
-    margin: auto;
+    margin: 15px auto;
 }
 .navSec a:hover{
    color: red;
@@ -28,6 +28,9 @@
     transition: 0.3s ease-in-out;
     transform: scale(1.1);
 }
+.card h5{
+    height: 70px;
+}
 .form-control{
     border-radius: 3px;
     width: 500px;
@@ -37,7 +40,7 @@
 .search-icon{
     position: absolute;
     z-index: 10;
-    right:28%;
+    right:20%;
     top: 21px;
     color:blue;
 }

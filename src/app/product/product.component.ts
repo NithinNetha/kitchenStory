@@ -8,29 +8,68 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  searchKey:string
-  public productList:any
-  constructor(private proApi:ProductService,private cartService:CartService,) { }
+  searchKey: string
+  public FullList: any
+  public searchList: any
+  constructor(private proApi: ProductService, private cartService: CartService,) { }
 
   ngOnInit(): void {
-    this.proApi.getProducts().subscribe(res=>{
-      this.productList=res;
-      this.productList.forEach((a:any)=>{
-        Object.assign(a,{quantity:1,total:a.price});
+    this.proApi.getProducts().subscribe(res => {
+      this.searchList = res;
+      this.searchList.forEach((a: any) => {
+        Object.assign(a, { quantity: 1, total: a.price });
       });
     })
+    this.getAllProducts()
   }
-  addToCart(product:any){
+  getAllProducts() {
+    this.proApi.getProducts().subscribe(res => {
+      this.FullList = res;
+      this.FullList.forEach((a: any) => {
+        Object.assign(a, { quantity: 1, total: a.price });
+      });
+    })
+    this.searchList=this.FullList;
+  }
+
+  addToCart(product: any) {
     this.cartService.addToCart(product);
   }
-  Search(){
-    if(this.searchKey==""){
+  Search() {
+    if (this.searchKey == "") {
       this.ngOnInit();
-    }else{
-      this.productList=this.productList.filter(res=>{
-        return res.title.toLocaleLowerCase().match(this.searchKey.toLocaleLowerCase())
+    } else {
+      this.searchList = this.FullList.filter(res => {
+        return res.title.toLowerCase().match(this.searchKey.toLowerCase())
       })
     }
   }
 
+  SearchCatPie() {
+    this.searchList = this.FullList.filter(res => {
+      return res.category.toLowerCase().match("pie")
+    })
+  }
+
+  AllCatPie() {
+    this.searchList=this.FullList
+    console.log('All Search'+this.searchList)
+    console.log('ALl Full'+this.FullList)
+  }
+
+  SearchCatTarts() {
+    this.searchList = this.FullList.filter(res => {
+      return res.category.toLowerCase().match("tart")
+    })
+  }
+  SearchCatMeal() {
+    this.searchList = this.FullList.filter(res => {
+      return res.category.toLowerCase().match("meal")
+    })
+  }
+  SearchCatPastie() {
+    this.searchList = this.FullList.filter(res => {
+      return res.category.toLowerCase().match("pastie")
+    })
+  }
 }

@@ -16,16 +16,19 @@
         <div class="container d-flex">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="navSec">
-                    <a class="navbar-brand">All Products</a>
+                    <a (click)="AllCatPie()" class="navbar-brand">All Products</a>
                 </div>
                 <div class="navSec">
-                    <a class="navbar-brand">Pies</a>
+                    <a (click)="SearchCatPie()" class="navbar-brand">Pies</a>
                 </div>
                 <div class="navSec">
-                    <a class="navbar-brand">Tarts</a>
+                    <a (click)="SearchCatTarts()" class="navbar-brand">Tarts</a>
                 </div>
                 <div class="navSec">
-                    <a class="navbar-brand">Meals</a>
+                    <a (click)="SearchCatMeal()" class="navbar-brand">Meals</a>
+                </div>
+                <div class="navSec">
+                    <a (click)="SearchCatPastie()" class="navbar-brand">Pasties</a>
                 </div>
             </nav>
             <div class="form-group">
@@ -37,11 +40,10 @@
 </div>
 <div class="container">
     <div class="row">
-        <ng-container *ngFor="let item of productList">
+        <ng-container *ngFor="let item of searchList">
             <div class="card col-md-3">
                 <img src="{{item.image}}" alt="">
-                <h5 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch">{{item.title}}
-                </h5>
+                <h5>{{item.title}} </h5>
                 <p><strong>Price: </strong>${{item.price}}</p>
                 <button class="btn btn-primary" (click)="addToCart(item)" >Add to Cart</button>
             </div>
