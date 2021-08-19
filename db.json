@@ -1,32 +1,199 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "title": "Chicken & Leek Pie",
-            "category": "pie",
-            "price": 8.20,
-            "image": "./assets/images/chickenPie.jpg"
-        },
-        {
-            "id": 2,
-            "title": "Lamb & Mint Pie",
-            "category": "pie",
-            "price": 8.20,
-            "image": "./assets/images/lambPie.jpg"
-        }
-    ],
-    "Admin": [
-        {
-            "username": "admin",
-            "password": "password"
-        }
-    ],
-    "Customer":[
-        {
-            "email":"cust@gmail.com",
-            "name":"Customer",
-            "contact":"9786542546",
-            "Address":"4-12-17,Acer Road,Lenovo-522155"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "title": "Chicken & Leek Pie",
+      "category": "pie",
+      "price": 8.2,
+      "image": "./assets/images/chickenPie.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Lamb & Mint Pie",
+      "category": "pie",
+      "price": 8.2,
+      "image": "./assets/images/lambPie.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Family Chichen & Leek Pie",
+      "category": "pie",
+      "price": 24,
+      "image": "./assets/images/FamChickPie.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Family Lamb and Mint Pie",
+      "category": "pie",
+      "price": 24,
+      "image": "./assets/images/FamMeatPie.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Family Truffled Mushroom Pie",
+      "category": "pie",
+      "price": 24,
+      "image": "./assets/images/FamtruffMushPie.jpeg"
+    },
+    {
+      "id": 6,
+      "title": "Mini Chicken Pie x 12",
+      "category": "pie",
+      "price": 30,
+      "image": "./assets/images/MiniChickPie.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Mini Lamb Pie x 30pcs",
+      "category": "pie",
+      "price": 30,
+      "image": "./assets/images/MiniMeatPie.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Tart - Apple and Almond",
+      "category": "tart sweet",
+      "price": 15,
+      "image": "./assets/images/appleTart.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Tart - Lemon and Passionfruit",
+      "category": "tart sweet",
+      "price": 15,
+      "image": "./assets/images/lemonTart.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Tart - Traditional Custard",
+      "category": "tart sweet",
+      "price": 15,
+      "image": "./assets/images/CusturdTart.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Tart - Rhubarb Cheesecake",
+      "category": "tart sweet",
+      "price": 15,
+      "image": "./assets/images/RhubarbTart.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Tart - Chocolate and Hazelnut",
+      "category": "tart sweet",
+      "price": 15,
+      "image": "./assets/images/chocTart.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Red Wine Duck Casserole with Herbed Lentils (serves 2)",
+      "category": "Meal",
+      "price": 26,
+      "image": "./assets/images/RedDuckMeal.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Traditional Meat Stroganoff (serves 2-3)",
+      "category": "meal",
+      "price": 20,
+      "image": "./assets/images/TradMeatStrogMeal.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Vietnamese Braised Meat with Lemongrass and Ginger (serves 2-3)",
+      "category": "meal",
+      "price": 20,
+      "image": "./assets/images/VietBrasMeatMeal.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Lamb and Veal Meatballs (serves 2)",
+      "category": "meal",
+      "price": 22,
+      "image": "./assets/images/MeatBallMeal.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Braised Lamb Tagine (serves 2-3)",
+      "category": "meal",
+      "price": 24,
+      "image": "./assets/images/LambTagMeal.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Miso Caramel Braised Mushroom (serves 2-3)",
+      "category": "meal",
+      "price": 18,
+      "image": "./assets/images/carBraisMeal.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Chicken Pesto Balls in Sugo (serves 2-3)",
+      "category": "meal",
+      "price": 19,
+      "image": "./assets/images/ChickPestoMeal.jpg"
+    },
+    {
+      "id": 20,
+      "title": "Vegan Savoury Tart Carrot & Parsnip (Individual Serve)",
+      "category": "tart",
+      "price": 7.5,
+      "image": "./assets/images/VeganCarTart.png"
+    },
+    {
+      "id": 21,
+      "title": "Vegan Savoury Tart Roast Vegetable (Individual Serve)",
+      "category": "tart",
+      "price": 7.5,
+      "image": "./assets/images/RoastVegTart.png"
+    },
+    {
+      "id": 22,
+      "title": "Vegan Savoury Tart Spinach & Mushroom (Individual Serve)",
+      "category": "tart",
+      "price": 7.5,
+      "image": "./assets/images/VeganMushTart.png"
+    },
+    {
+      "id": 23,
+      "title": "Vegan Savoury Tart Tomato & Basil (Individual Serve)",
+      "category": "tart",
+      "price": 7.5,
+      "image": "./assets/images/VeganTomTart.png"
+    },
+    {
+      "id": 24,
+      "title": "Mini Moroccan Sweet Potato Pastie x 6",
+      "category": "pastie",
+      "price": 30,
+      "image": "./assets/images/MiniSweetPotPastie.jpeg"
+    },
+    {
+      "id": 25,
+      "title": "Morrocan Sweet Potato Pastie",
+      "category": "pastie",
+      "price": 15,
+      "image": "./assets/images/MorSweetPastie.jpg"
+    }
+  ],
+  "Admin": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "nithin"
+    },
+    {
+      "id": 2,
+      "username": "nithin",
+      "password": "password"
+    }
+  ],
+  "Customer": [
+    {
+      "email": "cust@gmail.com",
+      "name": "Customer",
+      "contact": "9786542546",
+      "Address": "4-12-17,Acer Road,Lenovo-522155"
+    }
+  ]
 }

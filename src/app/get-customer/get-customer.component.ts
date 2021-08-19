@@ -2,6 +2,7 @@ import { CustomerService } from './../services/customer.service';
 import { CustomerModel } from './customer-model';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup, Validators, } from '@angular/forms';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-get-customer',
@@ -15,7 +16,7 @@ export class GetCustomerComponent implements OnInit {
   contact:FormControl;
   address:FormControl;
   customerObj:CustomerModel=new CustomerModel();
-  constructor(private formbuilder:FormBuilder,private customerService:CustomerService) { }
+  constructor(private formbuilder:FormBuilder,private customerService:CustomerService,private cartService:CartService) { }
 
   ngOnInit(): void {
     this.name=new FormControl('',Validators.required)

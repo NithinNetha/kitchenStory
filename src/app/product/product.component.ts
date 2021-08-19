@@ -10,7 +10,7 @@ import { ProductService } from '../services/product.service';
 export class ProductComponent implements OnInit {
   searchKey:string
   public productList:any
-  constructor(private proApi:ProductService,private cartService:CartService) { }
+  constructor(private proApi:ProductService,private cartService:CartService,) { }
 
   ngOnInit(): void {
     this.proApi.getProducts().subscribe(res=>{

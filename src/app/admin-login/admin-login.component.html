@@ -1,0 +1,11 @@
+<div class="col-md-6 offset-md-3 shadow-lg mt-5 p-5 text-primary text-center"
+style="background-color: white; border-radius: 35px; ">
+<form [formGroup]="formValue">
+    <h6 *ngIf="error" style="color:red">Username or Password Wrong...! Try Again</h6>
+    <h3 class="text-center text-dark"> Username</h3>
+    <input type="text" formControlName="username" class="form-control shadow-lg" placeholder="" /><br>
+    <h3 class="text-center text-dark"> Password </h3>
+    <input type="password" formControlName="password" class="form-control shadow-lg" /><br>
+    <button (click)="authenticate()" class="btn btn-dark">Login</button>
+</form>
+</div>

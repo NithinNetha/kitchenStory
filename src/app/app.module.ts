@@ -11,6 +11,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { GetCustomerComponent } from './get-customer/get-customer.component';
 import { PrintOrderComponent } from './print-order/print-order.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { PrintOrderComponent } from './print-order/print-order.component';
     CartComponent,
     CheckoutComponent,
     GetCustomerComponent,
-    PrintOrderComponent
+    PrintOrderComponent,
+    AdminLoginComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,

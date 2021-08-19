@@ -8,7 +8,6 @@ export class CartService {
   public cartItemList:any=[]
   public productList = new BehaviorSubject<any>([]);
   public productNames:string[];
-
   constructor() { }
   getProduct(){
     return this.productList.asObservable();
